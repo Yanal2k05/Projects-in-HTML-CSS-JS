@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESACARES</title>
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+            background: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #323124;
+            color: white;
+            height: 125px;
+        }
+        nav {
+            background: #034f28;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('background-image.jpg') no-repeat center center/cover;
+            color: black;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 50px;
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            background: white;
+            border-radius: 10px;
+            color: white;
+        }
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        footer {
+            background: #034f28;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-logo {
+            margin-top: 10px;
+        }
+
+        .style {
+            margin-bottom: 20px;
+            background-color: #046507;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px #cdd70dc9;
+        }
+        .animation {
+            margin-bottom: 20px;
+            background-color: #046507;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px #cdd70dc9;
+            transition: transform 0.3s;
+        }
+
+        .animation:hover {
+            transform: scale(0.95);
+        }
+
+.text-container {
+    font-size: 24px;
+    font-family: 'Calibri', sans-serif;
+    width: 21.5ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px white;
+    color: black;
+    margin: 20px auto;
+    text-align: center;
+    height: 30px;
+    position: relative;
+}
+
+.text-container span {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.text-1 {
+    animation: fade-inout1 15s infinite;
+}
+
+.text-2 {
+    animation: fade-inout2 15s infinite;
+}
+
+.text-3 {
+    animation: fade-inout3 15s infinite;
+}
+
+.text-4 {
+    animation: fade-inout4 15s infinite;
+}
+
+
+@keyframes fade-inout1 {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 0; }
+    
+}
+
+@keyframes fade-inout2 {
+    20% { opacity: 0; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    
+}
+
+@keyframes fade-inout3 {
+    40% { opacity: 0; }
+    50% { opacity: 1; }
+    60% { opacity: 0; }
+    
+}
+
+@keyframes fade-inout4 {
+    60% { opacity: 0; }
+    70% { opacity: 1; }
+    80% { opacity: 0; }
+    
+}
+
+@keyframes fade-inout5 {
+    80% { opacity: 0; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+    
+}
+
+.result-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.result {
+    text-align: center;
+}
+
+.result h2 {
+    font-size: 48px;
+    color: black;
+}
+
+.result p {
+    font-size: 18px;
+    color: black;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    border: 2px solid green;
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+    text-align: center;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+/* Navigation dots */
+.dot-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="mesacares_logo.png" alt="MESACARES" style="width: 125px; height: 125px;">
+        <p style="position: absolute; top: 9px; left: 110px;"> For Middle Eastern students <br> By <br> Middle Eastern students
+        </p>          
+    </header>
+    
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tmcn">TMCN</a>
+        <a href="#mc-platform">MC Platform</a>
+        <a href="#mc-giving">MC Giving</a>
+        <a href="#services">Services</a>
+        <a href="#about-us">About Us</a>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>Empowering Middle Eastern Students</h1>
+            <div class="text-container">
+                <span class="text-1">Creating opportunities</span>
+                <span class="text-2">Supporting the community</span>
+                <span class="text-3">Empowering students</span>
+                <span class="text-4">Building a brighter future</span>
+                <span class="text-5">MESACARES</span>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="home" class="section animation">
+        <h2>Welcome to MESACARES</h2>
+        <p>We started MESACARES to support Middle Eastern students. Our mission is to create opportunities and a supportive community for students.</p>
+        <p>Our Mission and Vision Statements</p>
+        <p>Non-profit Organization</p>
+    </section>
+
+    <section class="result-container">
+        <div class="result">
+            <p style="color: black; font-size: 40px; text-align: center; margin-top: -5px; margin-left: -400px;">Your Impact</p>
+            <h2 style=" text-align: center; margin-top: 9.5px; border-bottom: 3px solid green; display: inline-block; padding-bottom: 5px;">xxx</h2>            
+            <p>students in active mentorship</p>
+        </div>
+        <div class="result">
+            <h2 style=" text-align: center; margin-top: 108px; border-bottom: 3px solid green; display: inline-block; padding-bottom: 5px;">$xxx.xx</h2>
+            <p>fundings raised</p>
+        </div>
+    </section>
+
+    <section id="members-slideshow" class="section">
+        <h2>Meet Our Members</h2>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <h3>John Doe</h3>
+                <p>"Passionate about empowering Middle Eastern students."</p>
+            </div>
+
+            <div class="slide fade">
+                <h3>Jane Smith</h3>
+                <p>"Dedicated to building a supportive community."</p>
+            </div>
+
+            <div class="slide fade">
+                <h3>Ali Ahmed</h3>
+                <p>"Working towards a brighter future for all students."</p>
+            </div>
+        </div>
+
+        <!-- Navigation dots -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+
+    <section id="services" class="style">
+        <h2 style="color: white; text-align: center;">Our Services</h2>
+        <a href="#community-channel" style=" text-align: center; color: white; display: block;">Join our community channel</a>
+    </section>
+
+    
+    <div class="services-container">
+        <section id="tmcn" class="section animation">
+            <h2>TMCN</h2>
+            <p>Short description of TMCN</p>
+            <h3>Events at each MESA</h3>
+            <a href="#annual-event">Link to the Annual Event</a>
+        </section>
+
+        <section id="mc-platform" class="section animation">
+            <h2>MC Platform</h2>
+            <p>Short description of MC Platform</p>
+            <h3>Mentorship Program</h3>
+            <p>Short description of the mentorship program.</p>
+            <a href="#community-channel">Join our community channel</a>
+            <h3>Apply to be part of MESACARES</h3>
+            <form action="https://docs.google.com/forms/d/1QgpxwFjbCy7HOCSifv45ho4EBM9y0Zh6uvEbVjMnz0U/viewform?pli=1&pli=1&edit_requested=true" method="get">
+                <button type="submit">Apply Now</button>
+            </form>
+            <h3>MESAs who signed the contract</h3>
+        </section>
+
+        <section id="mc-giving" class="section animation">
+            <h2>MC Giving</h2>
+            <p>Short description of MC Giving</p>
+            <h3>Scholarships</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>Based on academic performance</li>
+                <li>Financial aid to a student in need</li>
+            </ul>
+            <h3>Donations</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>Charities</li>
+                <li>Fundraising for MESACARES</li>
+            </ul>
+        </section>
+    </div>
+
+    
+
+    <footer>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>The team behind MESACARES:</p>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>University details and MESA involvement</li>
+            </ul>
+            <p>Why we started MESACARES and our hopes for the future.</p>
+            <div class="footer-logo">
+                <h2>Contact Us</h2>
+                <a href="https://www.instagram.com/mesacares/" target="_blank">
+                    <img src="instagram.png" alt="Instagram" style="width: 50px; height: 50px;">
+                </a>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+    let slideIndex = 0;
+    let timer; // For auto-slide
+
+    showSlides(slideIndex);
+
+    function showSlides(index) {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        
+        if (index >= slides.length) {slideIndex = 0}    
+        if (index < 0) {slideIndex = slides.length - 1}
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex].style.display = "block";  
+        dots[slideIndex].className += " active";
+
+        // Reset timer for auto-slide
+        clearTimeout(timer);
+        timer = setTimeout(() => {plusSlides(1)}, 10000); // Change slide every 10 seconds
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        showSlides(slideIndex);
+    }
+
+    function currentSlide(n) {
+        slideIndex = n - 1;
+        showSlides(slideIndex);
+    }
+    </script>
+</body>
+</html>
